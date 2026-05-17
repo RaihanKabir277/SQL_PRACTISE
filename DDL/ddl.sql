@@ -23,3 +23,13 @@ select
 	'New_Customer' as Customer_type
 from customers;
 
+
+-- Drop the table column phone 
+alter table persons drop column phone;
+
+-- drop the table
+drop table persons;
+
+
+
+
