@@ -25,3 +25,11 @@ update customers
 set score = 0
 where score is null
 
+-- delete the record from the table
+delete from customers
+where id = 7   -- if we does not specify the where clause then all the records will be deleted from the table
+
+-- delete all the records from the table
+truncate table customers   --it will more faster than delete because it does not log individual row deletions and does not fire triggers. It also resets any auto-incrementing counters to zero. However, it cannot be rolled back and will remove all records from the table, so use with caution.
+
+
