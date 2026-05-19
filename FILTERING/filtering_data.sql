@@ -50,6 +50,14 @@ where country is null or score is null   -- filter the data where country is nul
 select * from customers
 where country is null and score is null   -- filter the data where country is null and score is null
 
+-- Range operator
+
+select * from customers
+where score between 100 and 500   -- filter the data where score is between 100 and 500
+
+select * from customers
+where score not between 100 and 500   -- filter the data where score is not between 100 and 500
+
 
 
 
