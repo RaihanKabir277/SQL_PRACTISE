@@ -58,6 +58,19 @@ where score between 100 and 500   -- filter the data where score is between 100 
 select * from customers
 where score not between 100 and 500   -- filter the data where score is not between 100 and 500
 
+-- Membership operator
 
+select * from customers
+where country = 'USA' or country = 'UK'   -- filter the data where country is USA or UK
+-- below is the same query using in operator and shorter than above query
+select * from customers
+where country in ('USA', 'UK')   -- filter the data where country is either USA or UK
+
+select * from customers
+where country <> 'USA' or country <> 'UK' -- filter the data where country is not USA or not UK. This query will return all the records because if country is USA then it is not UK and if country is UK then it is not USA. So we need to use and operator instead of or operator to get the correct result
+
+
+select * from customers
+where country not in ('USA', 'UK')  -- filter the data where country is not USA or UK
 
 
