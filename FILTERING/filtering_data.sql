@@ -73,4 +73,21 @@ where country <> 'USA' or country <> 'UK' -- filter the data where country is no
 select * from customers
 where country not in ('USA', 'UK')  -- filter the data where country is not USA or UK
 
+-- Like operator --> % is used to match any sequence of characters and _ is used to match any single character
+
+select * from customers
+where country like 'U%'   -- filter the data where country starts with U
+
+select * from customers 
+where first_name like '%n'  -- filter the data where first_name ends with n
+
+
+select * from customers
+where first_name like '%r%'  -- filter the data where first_name contains r
+
+select * from customers
+where country like 'U__'   -- filter the data where country starts with U and has 3 characters
+
+select * from customers
+where country like 'U%' and score > 500   -- filter the data where country starts with U and score is greater than 500
 
