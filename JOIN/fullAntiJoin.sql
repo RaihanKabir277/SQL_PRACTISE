@@ -1,4 +1,4 @@
-
+--Find customers without orders and orders without customers
 
 select * from ecommerce.bronze.bronz_brands as b 
 full join ecommerce.bronze.bronz_category as c
